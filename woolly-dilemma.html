@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My D&D Adventures</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); /* Deep mystical night background */
+            --content-bg: #222222;
+            --text-main: #d1d5db;
+            --text-heading: #f3f4f6;
+            --accent: #a78bfa; /* Soft purple accent */
+            --box-bg: #333333;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--text-heading);
+            font-weight: 400;
+        }
+
+        /* Top Navigation / Header */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .site-title {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        .site-subtitle {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #9ca3af;
+            margin-top: 10px;
+        }
+
+        .nav-links {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Main Content Area */
+        .main-container {
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+            background-color: var(--content-bg);
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .post-title {
+            font-size: 2rem;
+            margin-top: 0;
+            text-transform: uppercase;
+            border-bottom: 1px solid #444;
+            padding-bottom: 15px;
+        }
+
+        .post-quote {
+            font-style: italic;
+            color: #9ca3af;
+            margin-bottom: 20px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border: 1px solid #444;
+        }
+
+        .post-content p {
+            margin-bottom: 20px;
+        }
+
+        /* Download Section */
+        .download-section {
+            margin-top: 40px;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+        }
+
+        .donation-text {
+            font-style: italic;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .download-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--box-bg);
+            padding: 15px 20px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: var(--text-heading);
+            transition: background-color 0.2s;
+            border-left: 4px solid #555;
+        }
+
+        .download-box:hover {
+            background-color: #404040;
+            border-left-color: var(--accent);
+        }
+
+        .file-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .file-name {
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .file-size {
+            font-size: 0.8rem;
+            color: #9ca3af;
+        }
+
+        .download-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Recent Posts Grid */
+        .recent-posts {
+            margin-top: 50px;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+        }
+
+        .recent-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .recent-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .recent-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border: 1px solid #444;
+        }
+
+        .recent-card p {
+            font-size: 0.8rem;
+            text-align: center;
+            margin-top: 8px;
+            text-transform: uppercase;
+        }
+
+        /* Footer / Bio */
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #444;
+        }
+
+        .bio-text {
+            max-width: 300px;
+        }
+
+        .bio-text h3 {
+            margin: 0 0 10px 0;
+        }
+
+        .bio-text p {
+            font-size: 0.85rem;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </div>
+        <h1 class="site-title">Asher Aschilean</h1>
+        <p class="site-subtitle">Writing and Adventures</p>
+    </header>
+
+    <div class="main-container">
+        
+
+        <article>
+            <h2 class="post-title">The Wizard's Woolly Dilemma (D&D 1st edition Adventure)</h2>
+            <p class="post-quote">Some quests require steel and spell. This one requires a good shear.</p>
+            
+            <img class="hero-image" src="adventur.jpg" alt="png">
+
+            <div class="post-content">
+                <p>The Wizard's Woolly Dilemma "Beware the wizard in sheep's clothing..."
+What starts as a peaceful rest on a dusty country road quickly turns into a battle for a wizard's legacy! Your party is interrupted by a frantic, unnervingly intelligent sheep carrying a wax-sealed scroll in its mouth. This is no ordinary farm animal—it’s Finethir Shinebright, a powerful Magic-User who was betrayed and polymorphed by his treacherous apprentice, Noke.
+
+Now, Noke has claimed Finethir's magical treehouse tower and is using a broken Wand of Polymorph to wreak havoc on the local wildlife. Finethir needs a brave (or easily bribed) band of adventurers to escort him home, defeat his usurper, and turn him back into a human.</p>
+                
+               
+            </div>
+
+            <div class="download-section">
+                <p class="donation-text">All of my adventures are FREE! If you've enjoyed them, please consider supporting me. Thank you!</p>
+                
+                <a href="The Wizard's Woolly Dilemma.pdf" class="download-box" download>
+                    <div class="file-info">
+                        <span class="file-name">&#128196; The Wizard's Woolly Dilemma.pdf</span>
+                        <span class="file-size">Download PDF •</span>
+                    </div>
+                    <div class="download-icon">&#8595;</div>
+                </a>
+
+            
+            </div>
+        </article>
+
+        <!-- Recent Posts Grid -->
+    </div>
+
+    <footer>
+        <div style="text-align: right;">
+            <h3 style="margin: 0 0 10px 0;">Follow me</h3>
+            <a href="https://www.reddit.com/user/Green_Ad5289/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button" target="_blank" style="margin:0; color:#a78bfa; text-decoration: none; font-size: 0.9rem; font-weight: bold;">u/Green_Ad5289</a>
+        </div>
+        
+        <img class="profile-pic" src="pfp.png" alt="Profile Picture">
+        
+        <div class="bio-text">
+            <h3>Asher Aschilean</h3>
+            <p>Gamer, and Dungeon Master. Creating worlds for you to explore.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
